@@ -25,7 +25,7 @@ This repository contains an LFS file (VGG_model.h5) as this weights file is of 1
     ```
 ---
 
-### Steps to run the malaria Application Detector classifier app on your machine🎉
+### Steps to run the malaria Application Detector classifier app on your machine
 1. Fire up the terminal in the cloned repository directory.
 
 2. First create a virtual environment.
