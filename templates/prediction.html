@@ -1,23 +1,140 @@
 {% extends 'base.html' %}
 {% block content %}
+ 
+<!DOCTYPE html
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"="width=devicewidth, initial-=1.0">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url(..\static\img\ff.jpg)
+        }
+        .container {
+            width: 600px;
+            padding: 16px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 100px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .report-details {
+            margin-top: 32px;
+        }
+        .report-details p {
+            margin-bottom: 16px;
+        }
+        .lab-attender-comment {
+            border: 1px solid black;
+            padding: 16px;
+            margin-top: 32px;
+            background-color: #f5f5f5;
+        }
+        .print-button-container {
+
+        
+
+        bottom: 20px;
+
+        right: 20px;
+
+        z-index: 1000;
+
+        }
 
 
-<div style="height: 100vh; box-sizing: border-box; background-image: url(../static/img/ff.jpg);
+        .print-button {
+
+        padding: 10px 20px;
+
+        background-color: #007bff;
+
+        color: white;
+
+        border: none;
+
+        border-radius: 5px;
+
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+     <div style="background-image: url(static\img\ff.jpg);"> </div>
+<div style="text-align: center;">
+    <img src="static\img\logo.png" width="100px"height="100px">
+
+   <h1>FEDERAL UNIVERSITY DUTSE </h1>
+    <h5>ibrahim Aliyu Bye-pass Dutse</h5>
+    <h5>P.M.B 7156, Dutse</h5>
+    <h4>UNIVERSITY CLINIC</h4>
+    <br>
+    <br>
+    <div>
+        <h3 style="text-align: center;" style="-ms-text-underline-position: alphabetic;">MALARIA PARASITE RESULT</h3>
+    </div>
+
+    </div>
+
+    
+
+    <div style="height: 100vh; box-sizing: border-box; background-image: url(../static/img/);
 background-size: cover;
 background-repeat: no-repeat; 
 align-items:center; 
 text-align: center;">
 
-<div style="width: 90%; margin: auto; text-align: center;">
+    <div style="width: 90%; margin: auto; text-align:center;">
     <img src="{{ url_for('send_file', filename=image_file_name)}}" style ="max-width: 500px; max-height: 450px; margin-top: 30px; margin-bottom: 10px">
     <p style="font-style: italic">{{ image_file_name }}</p>
 
 
-        <h3 style="font-size: 50px;">This is a {{name}} blood with {{accuracy}}% accuracy</h3>
-   
-
-     <a href="/upload">Back to upload</a><br>
+        <h3 style="font-size: 30px;">This is a {{name}} blood with {{accuracy}}% accuracy</h3>
+      
 </div>
+
+
+
+    <div class="container">
+        <h1>Malaria Report</h1>
+        <div class="report-details">
+            <form>
+                <label for="pname">Patient name:</label>
+                <input type="text" id="pname" name="pname"><br>
+                <label for="date">Date of Test:</label>
+                <input type="date" id="Date" name="Date"><br>
+                <label for="fname">Test Result:</label>
+                <input type="text" id="pname" name="pname"><br>
+
+              </form> 
+        
+        </div>
+        <div class="lab-attender-comment">
+            <p>Comment from Medical Lab Attender:</p>
+            <textarea>.</textarea></p>
+        </div>
+    </div>
+</body>
+<div class="print-button-container">
+
+    <button class="print-button" onclick="window.print()">Print</button><br>
+   
+</div>
+
+</div>
+
+</html>
+<button>
+<a href="/upload" class="button" class="container">Back to upload</a><br>
+</button>
 <!-- <a href="base.html">Back to home</a> -->
+
+
 
 {% endblock %}
