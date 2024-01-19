@@ -19,11 +19,8 @@ Prediction Page
 ### Steps to clone this repo on local machine 
 This repository contains an LFS file (VGG_model.h5) as this weights file is of 156 mb and github only allows to upload files which are less than 100 mb. So follow the steps below to clone it - 
 1. Download and install [Git LFS](https://git-lfs.github.com/) on your machine.
-2. Then after configuring Git LFS, open Bash console and type the usual git clone command. 
-    ``` bash
-    git clone https://github.com/eng979710/malaria-Application-Detector-Flask-web-app.git
-    ```
----
+2. Then after configuring Git LFS, open Bash console and type the usual git clone command.
+
 
 ### Steps to run the malaria Application Detector classifier app on your machine
 1. Fire up the terminal in the cloned repository directory.
